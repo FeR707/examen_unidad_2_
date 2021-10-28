@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 4</title>
+
+    <style type="text/css">
+        table.tableizer-table {
+            font-size: 14px;
+            border: 1px solid #CCC; 
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+        .tableizer-table td {
+            padding: 4px;
+            margin: 3px;
+            border: 1px solid #CCC;
+            width: 70px;
+        }
+        .tableizer-table th {
+            background-color: #2d7ac7; 
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        table.tableizer-table input{
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Ingrese su Nombre</h3>
+    <div>
+        <input type="text" placeholder="Nombre" id="cliente">
+    </div>
+    <br>
+    <h3>Agrege los equipos que desee</h3>
+    <table class="tableizer-table">
+        <thead>
+            <tr class="tableizer-firstrow">
+                <th>id</th><th>Equipos</th><th> </th><th>Cantidad</th><th>Prestados</th><th>Almacen</th><th> </th><th>Agregar</th></th><th></th></thead><tbody>
+         <tr> <td>1</td> <td>Computadoras</td>  <td></td><td>10</td><td id="prestado_compu">0</td><td id="almacen_compu">10</td><td>&nbsp;</td><td><input type="number" id="agregar_compu" value="0" min="0" max="10"></td><td></td></tr>
+         <tr> <td>2</td> <td>Tablet</td>   <td></td><td>10</td><td id="prestado_tablet">0</td><td id="almacen_tablet">10</td><td></td><td><input type="number" id="agregar_tablet" value="0" min="0" max="10"></td><td/tr>
+         <tr> <td></td> <td></td>   <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td></td></tr>
+         <tr> <td></td> <td></td>   <td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+         <tr> <td id="sol"></td> <td></td>   <td></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td></td><td></td></tr>
+        </tbody></table> <br>
+        <button id="btn" onclick="agregar()">Agregar</button>
+
+        <br><br><br><br>
+        <table class="tableizer-table">
+            <thead id="tabla_datos">
+                <tr><th>Nombre</th><th>Computadora</th><th>Tablet</th></tr>
+                <tr><td></td><td></td><td></td></tr>
+            </thead>
+        </table>
+</body>
+<script src="main.js"></script>
+</html>
